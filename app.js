@@ -3,6 +3,7 @@ const colorPickerChoice = document.querySelector('#color-picker-choice');
 const rainbowMode = document.querySelector('#rainbow-mode');
 const eraserMode = document.querySelector('#eraser');
 const clearAll = document.querySelector('#clear-all');
+const resetAll = document.querySelector('#reset-all');
 
 const gridSizeOne = document.querySelector('#grid-size-one').addEventListener('click', () => {
   createSketchboard(16);
