@@ -1,8 +1,14 @@
 const colorPicker = document.querySelector('#color-picker');
 const colorPickerChoice = document.querySelector('#color-picker-choice');
-const rainbowMode = document.querySelector('#rainbow-mode');
-const eraserMode = document.querySelector('#eraser');
-const clearAll = document.querySelector('#clear-all');
+const rainbowMode = document.querySelector('#rainbow-mode').addEventListener('click', () => {
+  rainbowModeOn();
+});
+const eraserMode = document.querySelector('#eraser').addEventListener('click', () => {
+  eraserModeOn();
+});
+const clearAll = document.querySelector('#clear-all').addEventListener('click', () => {
+  clearAllMode();
+});
 const resetAll = document.querySelector('#reset-all');
 
 const gridSizeOne = document.querySelector('#grid-size-one').addEventListener('click', () => {
@@ -29,8 +35,8 @@ function createSketchboard(gridSize = 16) {
     div.classList.add('sketchboard');
     div.setAttribute('id', `${i}`);
     sketchboardContainer.appendChild(div);
-  }
-}
+  };
+};
 
 createSketchboard();
 
@@ -38,6 +44,12 @@ createSketchboard();
 // add random background colors to the sketchboard divs on hover
 const sketchboardGrid = document.querySelectorAll('.sketchboard');
 
-sketchboardGrid.forEach(sketchboard => sketchboard.addEventListener('mouseover', () => {
-  sketchboard.setAttribute('style', `background-color:rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 1)`)
-}));
+function rainbowModeOn() {
+  sketchboardGrid.forEach(sketchboard => sketchboard.addEventListener('mouseover', () => {
+    sketchboard.setAttribute('style', `background-color:rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 1)`)
+  }));
+};
+
+function clearAllMode() {
+  sketchboardGrid.forEach(sketchboard => sketchboard.setAttribute('style', 'background-color:white'))
+};
