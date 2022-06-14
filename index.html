@@ -10,28 +10,35 @@
 </head>
 
 <body>
-  <h1>Etch-a-Sketch</h1>
-  <div class="container"></div>
-  <div class="sketchboard-buttons">
-    <div class="color-buttons">
-      <h2>Choose your color!</h2>
-      <div class="color-picker-choice"></div>
-      <button id="color-picker">Color Picker</button>
-      <button id="rainbow-mode">Rainbow Mode</button>
+  <header>
+    <h1>Etch-a-Sketch</h1>
+  </header>
+
+  <main>
+    <div class="user-interface">
+      <div class="sketchboard-buttons">
+        <div class="color-buttons">
+          <h2>Choose your color!</h2>
+          <div class="color-picker-choice"></div>
+          <button id="color-picker">Color Picker</button>
+          <button id="rainbow-mode">Rainbow Mode</button>
+        </div>
+        <div class="eraser-buttons">
+          <h2>Made a mistake?</h2>
+          <button id="eraser">Eraser</button>
+          <button id="clear-all">Clear</button>
+        </div>
+      </div>
+      <div class="grid-size-buttons">
+        <h2>Choose your grid size!</h2>
+        <button id="grid-size-16">16 x 16</button>
+        <button id="grid-size-32">32 x 32</button>
+        <button id="grid-size-48">48 x 48</button>
+        <button id="grid-size-64">64 x 64</button>
+      </div>
     </div>
-    <div class="eraser-buttons">
-      <h2>Made a mistake?</h2>
-      <button id="eraser">Eraser</button>
-      <button id="clear-all">Clear</button>
-    </div>
-  </div>
-  <div class="grid-size-buttons">
-    <h2>Choose your grid size!</h2>
-    <button id="grid-size-16">16 x 16</button>
-    <button id="grid-size-32">32 x 32</button>
-    <button id="grid-size-48">48 x 48</button>
-    <button id="grid-size-64">64 x 64</button>
-  </div>
+    <div class="container"></div>
+  </main>
   <script src="app.js"></script>
 </body>
 
