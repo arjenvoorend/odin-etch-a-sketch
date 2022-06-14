@@ -7,12 +7,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  border: 1px solid red;
-}
-
-.sketchboard {
-  height: 25px;
-  width: 25px;
-  border: 1px solid blue;
-  margin: 1px;
+  width: 720px;
+  height: 720px;
+  border: 0.5px solid black;
 }
