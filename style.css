@@ -4,10 +4,29 @@
   box-sizing: border-box;
 }
 
+main {
+  display: flex;
+}
+
 .container {
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  width: 720px;
-  height: 720px;
+  width: 480px;
+  height: 480px;
   border: 0.5px solid black;
+}
+
+.size-one {
+  grid-template-columns: repeat(16, 1fr);
+}
+
+.size-two {
+  grid-template-columns: repeat(32, 1fr);
+}
+
+.size-three {
+  grid-template-columns: repeat(48, 1fr);
+}
+
+.size-four {
+  grid-template-columns: repeat(64, 1fr);
 }
