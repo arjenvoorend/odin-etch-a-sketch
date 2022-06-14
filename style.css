@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  border: 1px solid red;
+}
+
+.sketchboard {
+  height: 25px;
+  width: 25px;
+  border: 1px solid blue;
+  margin: 1px;
+}
