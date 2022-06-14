@@ -50,6 +50,14 @@ function rainbowModeOn() {
   }));
 };
 
+// revert the background color back to white on hover
+function eraserModeOn() {
+  sketchboardGrid.forEach(sketchboard => sketchboard.addEventListener('mouseover', () => {
+    sketchboard.setAttribute('style', 'background-color:white')
+  }));
+};
+
+// revert all background colors back to white
 function clearAllMode() {
   sketchboardGrid.forEach(sketchboard => sketchboard.setAttribute('style', 'background-color:white'))
 };
