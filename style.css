@@ -47,6 +47,11 @@ main {
   color: #fff;
 }
 
+#color-picker {
+  padding: 0 2px;
+  height: 52px;
+}
+
 .color-btn:hover {
   background-color: rgba(252, 176, 69, 1);
   color: rgba(131, 58, 180, 1);
