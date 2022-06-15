@@ -16,29 +16,32 @@
 
   <main>
     <div class="user-interface">
-      <div class="sketchboard-btns">
-        <div class="color-btns">
-          <h2>Choose your color!</h2>
-          <div class="color-picker-choice"></div>
+      <div class="color-btns">
+        <div class="color-picker-choice">
           <button class="color-btn btn" id="color-picker">Color Picker</button>
           <button class="color-btn btn" id="rainbow-mode">Rainbow Mode</button>
         </div>
-        <div class="eraser-btns">
-          <h2>Made a mistake?</h2>
-          <button class="clear-btn btn" id="eraser">Eraser</button>
-          <button class="clear-btn btn" id="clear-all">Clear</button>
-          <button class="clear-btn btn" id="reset-all">Reset All</button>
-        </div>
       </div>
+
       <div class="grid-size-btns">
-        <h2>Choose your grid size!</h2>
-        <button class="grid-btn btn" id="grid-size-one">16 x 16</button>
-        <button class="grid-btn btn" id="grid-size-two">32 x 32</button>
-        <button class="grid-btn btn" id="grid-size-three">48 x 48</button>
-        <button class="grid-btn btn" id="grid-size-four">64 x 64</button>
+        <button class="grid-btn btn" id="grid-size-one">16x16</button>
+        <button class="grid-btn btn" id="grid-size-two">32x32</button>
+        <button class="grid-btn btn" id="grid-size-three">48x48</button>
+        <button class="grid-btn btn" id="grid-size-four">64x64</button>
+      </div>
+
+      <div class="color-picker-choice">
+        <button class="color-btn btn" id="warm-colors">Warm Colors</button>
+        <button class="color-btn btn" id="cool-colors">Cool Colors</button>
       </div>
     </div>
+
     <div class="container size-one"></div>
+    <div class="eraser-btns">
+      <button class="clear-btn btn" id="eraser">Eraser</button>
+      <button class="clear-btn btn" id="clear-all">Clear</button>
+      <button class="clear-btn btn" id="reset-all">Reset</button>
+    </div>
   </main>
   <script src="app.js"></script>
 </body>

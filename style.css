@@ -12,39 +12,53 @@ body {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(25deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-  color: #333;
 }
 
 header {
   padding: 2em;
   text-align: center;
   font-size: 32px;
+  color: #333;
 }
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .user-interface {
-  width: 350px;
-  padding: 0 1em;
+  display: flex;
+  width: 720px;
+  justify-content: center;
 }
 
 .user-interface h2 {
   margin-bottom: 0.2em;
 }
 
-.eraser-btns,
-.grid-size-btns {
-  margin-top: 1em;
+.color-picker-choice {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-btn {
+  background-color: #c72a5f;
+  color: #fff;
+}
+
+.color-btn:hover {
+  background-color: rgba(252, 176, 69, 1);
+  color: rgba(131, 58, 180, 1);
+  box-shadow: 0 0 3px 2px #fff;
 }
 
 .container {
   display: grid;
-  width: 500px;
-  height: 500px;
+  width: 520px;
+  height: 520px;
   box-shadow: 0 0 8px rgb(108, 108, 108);
+  margin: 1em;
 }
 
 .size-one {
@@ -65,28 +79,53 @@ main {
 
 .btn {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  font-weight: bold;
   margin: 3px 1px;
-  padding: 10px 20px;
-  background-color: #fff;
+  padding: 10px;
   border: none;
-  box-shadow: 0 0 3px rgb(108, 108, 108);
+  box-shadow: 0 0 3px #fff;
   cursor: pointer;
-}
-
-.btn:hover {
-  background-color: rgb(251, 251, 32);
+  width: 100px;
 }
 
 .btn-selected {
   background-color: rgb(164, 206, 243);
 }
 
+.grid-size-btns {
+  margin-top: 1.35em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.grid-btn {
+  background-color: #c72a5f;
+  color: #fff;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+}
+
+.grid-btn:hover {
+  background-color: rgba(252, 176, 69, 1);
+  color: rgba(131, 58, 180, 1);
+  box-shadow: 0 0 3px 3px #fff;
+}
+
 .btn-disabled {
-  background-color: #dadada;
+  background-color: rgba(252, 176, 69, 1);
+  color: rgba(131, 58, 180, 1);
+  box-shadow: 0 0 3px 3px #fff;
   cursor: not-allowed;
 }
 
-.btn-disabled:hover {
-  background-color: #dadada;
+.clear-btn {
+  background-color: rgba(252, 176, 69, 1);
+  color: rgba(131, 58, 180, 1);
+}
+
+.clear-btn:hover {
+  background-color: #c72a5f;
+  color: #fff;
+  box-shadow: 0 0 3px 2px #fff;
 }
