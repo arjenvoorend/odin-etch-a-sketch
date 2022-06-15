@@ -14,26 +14,36 @@ const resetAll = document.querySelector('#reset-all').addEventListener('click', 
 });
 
 // grab the grid size buttons and render a corresponding grid of sketchboard divs, removing any pre existing divs
-const gridSizeOne = document.querySelector('#grid-size-one').addEventListener('click', () => {
+const gridSizeOneBtn = document.querySelector('#grid-size-one');
+gridSizeOneBtn.addEventListener('click', () => {
   deleteGrid();
   sketchboardContainer.classList.add('size-one');
-  createSketchboard(16)
+  createSketchboard(16);
+  checkGridSize();
 });
-const gridSizeTwo = document.querySelector('#grid-size-two').addEventListener('click', () => {
+const gridSizeTwoBtn = document.querySelector('#grid-size-two');
+gridSizeTwoBtn.addEventListener('click', () => {
   deleteGrid();
   sketchboardContainer.classList.add('size-two');
-  createSketchboard(32)
+  createSketchboard(32);
+  checkGridSize();
 });
-const gridSizeThree = document.querySelector('#grid-size-three').addEventListener('click', () => {
+const gridSizeThreeBtn = document.querySelector('#grid-size-three');
+gridSizeThreeBtn.addEventListener('click', () => {
   deleteGrid();
   sketchboardContainer.classList.add('size-three');
   createSketchboard(48)
+  checkGridSize();
 });
-const gridSizeFour = document.querySelector('#grid-size-four').addEventListener('click', () => {
+const gridSizeFourBtn = document.querySelector('#grid-size-four');
+gridSizeFourBtn.addEventListener('click', () => {
   deleteGrid();
   sketchboardContainer.classList.add('size-four');
   createSketchboard(64);
+  checkGridSize();
 });
+
+const gridSizeBtns = [gridSizeOneBtn, gridSizeTwoBtn, gridSizeThreeBtn, gridSizeFourBtn];
 
 
 // create sketchboard divs and add them to the sketchboard container
@@ -49,8 +59,10 @@ function createSketchboard(gridSize = 16) {
   };
 };
 
+
 // render initial 16x16 board to browser
 createSketchboard();
+checkGridSize();
 
 
 // grab all the sketchboard divs currently displayed on the grid
@@ -93,6 +105,7 @@ function resetAllMode() {
   deleteGrid();
   createSketchboard(16);
   sketchboardContainer.classList.add('size-one');
+  checkGridSize();
 }
 
 
@@ -108,4 +121,37 @@ function deleteGrid() {
   sketchboardContainer.classList.remove('size-two')
   sketchboardContainer.classList.remove('size-three')
   sketchboardContainer.classList.remove('size-four')
+}
+
+
+// check grid size and disable corresponding button
+function checkGridSize() {
+  const currentGrid = getCurrentGrid();
+  if (currentGrid.length === 256) {
+    enableGridSizeBtns();
+    gridSizeBtns[0].disabled = true;
+    gridSizeBtns[0].classList.add('btn-disabled')
+  }
+  if (currentGrid.length === 1024) {
+    enableGridSizeBtns();
+    gridSizeBtns[1].disabled = true;
+    gridSizeBtns[1].classList.add('btn-disabled')
+  }
+  if (currentGrid.length === 2304) {
+    enableGridSizeBtns();
+    gridSizeBtns[2].disabled = true;
+    gridSizeBtns[2].classList.add('btn-disabled')
+  }
+  if (currentGrid.length === 4096) {
+    enableGridSizeBtns();
+    gridSizeBtns[3].disabled = true;
+    gridSizeBtns[3].classList.add('btn-disabled')
+  }
+}
+
+
+// enable grid size buttons
+function enableGridSizeBtns() {
+  gridSizeBtns.forEach(btn => btn.classList.remove('btn-disabled'))
+  gridSizeBtns.forEach(btn => btn.disabled = false)
 }

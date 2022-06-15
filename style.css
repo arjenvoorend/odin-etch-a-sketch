@@ -72,3 +72,12 @@ main {
 .btn:hover {
   background-color: aliceblue;
 }
+
+.btn-disabled {
+  background-color: #dadada;
+  cursor: not-allowed;
+}
+
+.btn-disabled:hover {
+  background-color: #dadada;
+}
