@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e7e7e7;
+  background-color: #f1f1f1;
 }
 
 header {
@@ -21,7 +21,17 @@ main {
 }
 
 .user-interface {
-  padding: 0 2em;
+  width: 350px;
+  padding: 0 1em;
+}
+
+.user-interface h2 {
+  margin-bottom: 0.2em;
+}
+
+.eraser-btns,
+.grid-size-btns {
+  margin-top: 1em;
 }
 
 .container {
@@ -48,6 +58,7 @@ main {
 }
 
 .btn {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 2px 1px;
   padding: 10px 20px;
   cursor: pointer;
