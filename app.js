@@ -1,7 +1,14 @@
 const colorPicker = document.querySelector('#color-picker');
 const colorPickerChoice = document.querySelector('#color-picker-choice');
+
 const rainbowMode = document.querySelector('#rainbow-mode').addEventListener('click', () => {
   rainbowModeOn();
+});
+const warmColorsMode = document.querySelector('#warm-colors').addEventListener('click', () => {
+  warmColorsOn();
+});
+const coolColorsMode = document.querySelector('#cool-colors').addEventListener('click', () => {
+  coolColorsOn();
 });
 const eraserMode = document.querySelector('#eraser').addEventListener('click', () => {
   eraserModeOn();
@@ -79,6 +86,28 @@ function rainbowModeOn() {
     sketchboard.setAttribute('style', `background-color:rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 1)`)
   }));
 };
+
+
+// add random warm background colors to the sketchboard divs on hover
+function warmColorsOn() {
+  const currentGrid = getCurrentGrid();
+  const warmColors = ['#ffd319', '#ff901f', '#ff6c11', '#ff3864', '#ff2975', '#9b2948', '#ff7251', '#ffca7b']
+
+  currentGrid.forEach(sketchboard => sketchboard.addEventListener('mouseover', () => {
+    sketchboard.setAttribute('style', `background-color: ${warmColors[Math.floor(Math.random() * warmColors.length)]}`)
+  }));
+}
+
+
+// add random cool background colors to the sketchboard divs on hover
+function coolColorsOn() {
+  const currentGrid = getCurrentGrid();
+  const warmColors = ['#261447', '#023788', '#f706cf', '#f222ff', '#8c1eff', '#33f7ff', '#33efff', '#33ffd0']
+
+  currentGrid.forEach(sketchboard => sketchboard.addEventListener('mouseover', () => {
+    sketchboard.setAttribute('style', `background-color: ${warmColors[Math.floor(Math.random() * warmColors.length)]}`)
+  }));
+}
 
 
 // revert the background color back to white on hover
