@@ -4,15 +4,31 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e7e7e7;
+}
+
+header {
+  padding: 2em;
+  text-align: center;
+  font-size: 32px;
+}
+
 main {
   display: flex;
+  justify-content: center;
+}
+
+.user-interface {
+  padding: 0 2em;
 }
 
 .container {
   display: grid;
-  width: 480px;
-  height: 480px;
-  border: 0.5px solid black;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 10px rgb(110, 108, 108);
 }
 
 .size-one {
@@ -29,4 +45,10 @@ main {
 
 .size-four {
   grid-template-columns: repeat(64, 1fr);
+}
+
+.btn {
+  margin: 2px 1px;
+  padding: 10px 20px;
+  cursor: pointer;
 }

@@ -43,6 +43,7 @@ function createSketchboard(gridSize = 16) {
   for (let i = 0; i < (gridSize * gridSize); i++) {
     let div = document.createElement('div');
     div.classList.add('sketchboard');
+    div.style.backgroundColor = "#fff";
     div.setAttribute('id', `${i}`);
     sketchboardContainer.appendChild(div);
   };
@@ -82,7 +83,7 @@ function eraserModeOn() {
 function clearAllMode() {
   const currentGrid = getCurrentGrid();
 
-  currentGrid.forEach(sketchboard => sketchboard.setAttribute('style', 'background-color:white'))
+  currentGrid.forEach(sketchboard => sketchboard.setAttribute('style', 'background-color:#fff'))
 };
 
 
