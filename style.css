@@ -7,6 +7,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f1f1f1;
+  color: #333;
 }
 
 header {
@@ -38,7 +39,7 @@ main {
   display: grid;
   width: 500px;
   height: 500px;
-  box-shadow: 0 0 10px rgb(110, 108, 108);
+  box-shadow: 0 0 8px rgb(108, 108, 108);
 }
 
 .size-one {
@@ -59,7 +60,15 @@ main {
 
 .btn {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 2px 1px;
+  color: #333;
+  margin: 3px 1px;
   padding: 10px 20px;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 0 3px rgb(108, 108, 108);
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: aliceblue;
 }
