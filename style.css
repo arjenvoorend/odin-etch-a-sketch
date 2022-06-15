@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f1f1f1;
+  background: linear-gradient(25deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
   color: #333;
 }
 
@@ -70,7 +75,11 @@ main {
 }
 
 .btn:hover {
-  background-color: aliceblue;
+  background-color: rgb(251, 251, 32);
+}
+
+.btn-selected {
+  background-color: rgb(164, 206, 243);
 }
 
 .btn-disabled {
