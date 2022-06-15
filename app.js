@@ -1,6 +1,6 @@
-const colorPicker = document.querySelector('#color-picker');
-const colorPickerChoice = document.querySelector('#color-picker-choice');
-
+const colorPicker = document.querySelector('#color-picker').addEventListener('input', (e) => {
+  chosenColorOn(e);
+})
 const rainbowMode = document.querySelector('#rainbow-mode').addEventListener('click', () => {
   rainbowModeOn();
 });
@@ -76,6 +76,15 @@ checkGridSize();
 function getCurrentGrid() {
   return document.querySelectorAll('.sketchboard')
 }
+
+
+function chosenColorOn(e) {
+  const currentGrid = getCurrentGrid();
+
+  currentGrid.forEach(sketchboard => sketchboard.addEventListener('mouseover', () => {
+    sketchboard.setAttribute('style', `background-color:${e.target.value}`)
+  }));
+};
 
 
 // add random background colors to the sketchboard divs on hover
