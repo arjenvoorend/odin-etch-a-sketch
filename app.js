@@ -78,6 +78,7 @@ function getCurrentGrid() {
 }
 
 
+// add the chosen color to the sketchboard divs on hover
 function chosenColorOn(e) {
   const currentGrid = getCurrentGrid();
 
